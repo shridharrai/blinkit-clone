@@ -1,0 +1,315 @@
+// address popup start
+.address-container {
+  .background-overlay {
+    background-color: rgb(0, 0, 0);
+    opacity: 0.5;
+    position: fixed;
+    z-index: 100;
+    inset: 0px;
+  }
+  .address-input-box {
+    background-color: #f9f9f9;
+    padding: 25px 50px 25px 30px;
+    width: 565px;
+    position: fixed;
+    top: 90px;
+    left: 100px;
+    z-index: 101;
+    h4 {
+      font-size: 1.8rem;
+      color: #000;
+      margin-bottom: 15px;
+      font-weight: 400;
+    }
+    button {
+      border: none;
+      background-color: unset;
+      font-size: 1.5rem;
+    }
+    .select-location {
+      display: flex;
+      gap: 25px;
+      align-items: center;
+      button {
+        background-color: #0c831f;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: none;
+        font-size: 1.2rem;
+      }
+      span {
+        color: #000;
+        border: 1px solid #000;
+        border-radius: 50%;
+        padding: 7px 8px;
+        display: inline-block;
+        position: relative;
+
+        &::after {
+          content: "";
+          width: 13px;
+          height: 1px;
+          background-color: #000;
+          position: absolute;
+          right: -13px;
+          top: 15px;
+        }
+        &::before {
+          content: "";
+          width: 13px;
+          height: 1px;
+          background-color: #000;
+          position: absolute;
+          left: -13px;
+          top: 15px;
+        }
+      }
+
+      input {
+        width: 49%;
+        border-radius: 5px;
+        padding: 10px;
+        border: 1px solid #000;
+        outline: none;
+      }
+    }
+
+    .searched-address {
+      ul {
+        list-style: none;
+        padding-left: 0px;
+
+        li {
+          margin-top: 20px;
+          padding: 12px 10px;
+          color: #000;
+          font-size: 1.6rem;
+          background-color: #fff;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .no-permission {
+    color: red;
+    font-size: 1.4rem;
+    margin-top: 30px;
+  }
+}
+// address popup ends
+
+// login popup starts
+.login-container {
+  @extend .address-container;
+
+  .login-form {
+    width: 570px;
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 101;
+  }
+  .login-form {
+    h2 {
+      font-size: 2.2rem;
+      padding: 40px 0px 28px;
+      // border-bottom: 1px solid #eee;
+      text-align: center;
+      font-weight: 400;
+      color: #333;
+    }
+  }
+  .form-body {
+    padding: 20px 120px 20px;
+    text-align: center;
+    p {
+      font-size: 1.9rem;
+    }
+    .user-number-verification {
+      position: relative;
+      margin-top: 15px;
+      input {
+        width: 100%;
+        padding: 6px 15px 6px 65px;
+        outline: none;
+        border: 1px solid #ccc;
+        font-size: 1.6rem;
+      }
+
+      &::after {
+        content: "+91-";
+        position: absolute;
+        font-size: 1.6rem;
+        top: 6px;
+        left: 26px;
+      }
+      &::before {
+        content: "";
+        width: 17px;
+        height: 20px;
+        background-image: url(/src/assets/icons/mobilephone.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 10px;
+        left: 5px;
+      }
+    }
+    button {
+      width: 100%;
+      padding: 8px;
+      color: #fff;
+      background-color: #0c831f;
+      outline: none;
+      border: unset;
+      font-size: 1.6rem;
+      font-weight: bold;
+      margin-top: 15px;
+    }
+
+    .terms-condition {
+      margin-top: 20px;
+      span {
+        font-size: 1.5rem;
+        color: #747070;
+      }
+      .terms-links {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        a {
+          color: #0c831f;
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+}
+// login popup ends
+
+// cart models starts
+.cart-container {
+  @extend .address-container;
+  .cart-box {
+    width: 350px;
+    background-color: #f5f7fd;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    z-index: 101;
+
+    .sidebar-header {
+      background-color: #fff;
+      padding: 18px 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      p {
+        margin-bottom: 0px;
+        font-size: 1.8rem;
+        font-weight: 700;
+      }
+      span {
+        font-size: 2.4rem;
+        line-height: 0;
+        cursor: pointer;
+      }
+    }
+    .no-product-found {
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 15px;
+      margin: 15px;
+      text-align: center;
+
+      img {
+        width: 200px;
+        height: auto;
+      }
+      h4 {
+        font-size: 2rem;
+        font-weight: bold;
+      }
+      p {
+        font-size: 1.6rem;
+      }
+      button {
+        color: #fff;
+        font-size: 1.4rem;
+        background-color: #0c831f;
+        padding: 8px 20px;
+        border: none;
+        border-radius: 10px;
+      }
+    }
+  }
+
+  .cart-product-list {
+    .single-product {
+      background-color: #fff;
+      margin: 15px;
+      border-radius: 10px;
+      padding: 0px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .product-img {
+        img {
+          width: 90px;
+          height: auto;
+        }
+      }
+      .product-details {
+        p {
+          font-size: 1.4rem;
+          margin-bottom: 5px;
+        }
+      }
+      .product-count {
+        .counter {
+          display: flex;
+          background-color: #0c831f;
+          color: #fff;
+          font-size: 1.8rem;
+          padding: 5px 10px;
+          gap: 12px;
+          border-radius: 5px;
+          font-weight: 600;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .total-to-pay {
+    background-color: #0c831f;
+    margin: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    .amount-due {
+      p {
+        margin-bottom: 0px;
+        font-size: 1.6rem;
+      }
+    }
+    .purchase {
+      p {
+        font-size: 2rem;
+        margin-bottom: 0px;
+      }
+    }
+  }
+}
+// cart models ends

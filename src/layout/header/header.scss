@@ -1,0 +1,193 @@
+.header-wrap {
+  padding: 20px 0px;
+  background-color: #fff;
+  border-bottom: 1px solid rgb(238, 238, 238);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 5;
+  .header-container {
+    max-width: min(97%, 1300px);
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo {
+      width: 120px;
+      img {
+        width: 100%;
+      }
+    }
+    .address-bar {
+      width: 20%;
+      height: 50px;
+      overflow: hidden;
+      h3 {
+        font-size: 1.9rem;
+        font-weight: bold;
+      }
+      p {
+        font-size: 1.5rem;
+        position: relative;
+        text-overflow: ellipsis;
+
+        &::after {
+          content: "";
+          width: 0px;
+          border-left: 6px solid transparent;
+          border-right: 6px solid transparent;
+          border-top: 6px solid rgb(0, 0, 0);
+          margin-left: 8px;
+          position: absolute;
+          top: 10px;
+          right: 0px;
+        }
+      }
+    }
+
+    .search-product {
+      width: 75%;
+      position: relative;
+      input {
+        width: 100%;
+        padding: 10px 10px 10px 55px;
+        outline: none;
+        font-size: 1.6rem;
+        background: rgb(255, 255, 255);
+        border: 1px solid rgb(221, 221, 221);
+        border-radius: 8px;
+        box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 8px;
+      }
+      img {
+        width: 22px;
+        position: absolute;
+        top: 12px;
+        left: 20px;
+      }
+    }
+
+    .search-bar {
+      background: rgb(248, 248, 248);
+      color: rgb(130, 130, 130);
+      border: 1px solid rgba(0, 0, 0, 0.04);
+      width: 40%;
+      padding: 10px;
+      border-radius: 8px;
+      display: flex;
+      gap: 15px;
+      overflow: hidden;
+      height: 45px;
+      img {
+        width: 23px;
+      }
+      p {
+        margin-bottom: 0px;
+        font-size: 1.6rem;
+      }
+
+      .search-animate {
+        height: 100%;
+        position: relative;
+
+        .goup {
+          position: absolute;
+          top: 140%;
+          left: 0px;
+          animation: 6000ms ease 0s infinite normal forwards running sechscroll;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 18px;
+          color: rgb(153, 153, 153);
+          margin-top: 1px;
+          width: 150px;
+        }
+
+        #animation-text-1 {
+          animation-delay: 0s;
+        }
+        #animation-text-2 {
+          animation-delay: 1500ms;
+        }
+        #animation-text-3 {
+          animation-delay: 3000ms;
+        }
+        #animation-text-4 {
+          animation-delay: 4500ms;
+        }
+      }
+    }
+
+    .log-user {
+      button {
+        border: none;
+        background-color: #fff;
+        font-size: 1.8rem;
+        letter-spacing: 2px;
+      }
+    }
+
+    .user-cart {
+      button {
+        background-color: rgb(12, 131, 31);
+        display: flex;
+        gap: 4px;
+        border: none;
+        color: #fff;
+        font-size: 1.6rem;
+        font-weight: bold;
+        padding: 12px;
+        border-radius: 10px;
+        align-items: center;
+        span {
+          line-height: 1;
+        }
+        &:hover {
+          img {
+            animation-name: cartshake;
+            animation-duration: 0.6s;
+            animation-iteration-count: 2;
+          }
+        }
+      }
+    }
+  }
+}
+
+// animation keyframe for cart button when user hover
+@keyframes cartshake {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(10deg);
+  }
+  75% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+// animation for search bar
+
+@keyframes sechscroll {
+  0% {
+    top: 100%;
+    visibility: visible;
+  }
+
+  10% {
+    top: 0px;
+  }
+
+  20% {
+    top: -110%;
+    visibility: hidden;
+  }
+
+  100% {
+    top: 100%;
+    visibility: hidden;
+  }
+}

@@ -1,0 +1,22 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin-top: 0px;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.cust-container {
+  max-width: Min(95%, 1240px);
+  margin-inline: auto;
+}

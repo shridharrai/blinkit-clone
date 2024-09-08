@@ -1,0 +1,30 @@
+.featured-category-banner {
+  margin-top: 100px;
+  img {
+    width: 100%;
+    margin-inline: auto;
+  }
+}
+
+.new-offers {
+  margin-top: 30px !important;
+  img {
+    width: 25%;
+    padding: 0px 10px;
+  }
+}
+
+.all-categories-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 20px;
+  .single-category-icon {
+    width: 11%;
+    img {
+      width: 100%;
+      // height: 100px;
+    }
+  }
+}
